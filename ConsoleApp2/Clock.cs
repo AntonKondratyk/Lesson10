@@ -20,14 +20,10 @@ namespace ConsoleApp2
             }
             set
             {
-                if (value < 0 || value > 60)
-                {
-                    grad = value;
-                }
+                if (value < 0 & value > 60)
+                { Console.WriteLine("0-60!!!"); }
                 else
-                {
-                    Console.WriteLine("0-60!!!");
-                };
+                { grad = value; }
             }
         }
         public double Min
@@ -38,14 +34,14 @@ namespace ConsoleApp2
             }
             set
             {
-                if (value < 0 || value > 60)
+                if (value > 0 & value < 60)
                 {
                     min = value;
                 }
                 else
                 {
                     Console.WriteLine("0-60!!!");
-                };
+                }
             }
         }
         public double Sec
@@ -56,14 +52,14 @@ namespace ConsoleApp2
             }
             set
             {
-                if (value < 0 || value > 60)
+                if (value > 0 & value < 60)
                 {
                     sec = value;
                 }
                 else
                 {
                     Console.WriteLine("0-60!!!");
-                };
+                }
             }
         }
         public Angle(double grad, double min, double sec)
@@ -75,7 +71,7 @@ namespace ConsoleApp2
 
         public double ToRadians() // переменные прописывать не надо, метод имеет к ним доступ внутри класса
         {
-            return (grad+(min + sec/60)/60)*Math.PI/180;
+            return (grad + (min + sec / 60) / 60) * Math.PI / 180;
         }
     }
     //class Clock
