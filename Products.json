@@ -1,0 +1,27 @@
+[
+  {
+    "Kod": 1,
+    "Name": "q",
+    "Price": 11
+  },
+  {
+    "Kod": 2,
+    "Name": "w",
+    "Price": 22
+  },
+  {
+    "Kod": 3,
+    "Name": "e",
+    "Price": 33
+  },
+  {
+    "Kod": 4,
+    "Name": "r",
+    "Price": 44
+  },
+  {
+    "Kod": 5,
+    "Name": "t",
+    "Price": 55
+  }
+]
