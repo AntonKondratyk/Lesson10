@@ -20,10 +20,10 @@ namespace ConsoleApp2
             }
             set
             {
-                if (value < 0 & value > 60)
-                { Console.WriteLine("0-60!!!"); }
+                if (value < 0 || value > 60)
+                    Console.WriteLine("0-60!!!");
                 else
-                { grad = value; }
+                    grad = value;
             }
         }
         public double Min
@@ -34,14 +34,10 @@ namespace ConsoleApp2
             }
             set
             {
-                if (value > 0 & value < 60)
-                {
-                    min = value;
-                }
-                else
-                {
+                if (value < 0 || value > 60)
                     Console.WriteLine("0-60!!!");
-                }
+                else
+                    min = value;
             }
         }
         public double Sec
@@ -52,21 +48,17 @@ namespace ConsoleApp2
             }
             set
             {
-                if (value > 0 & value < 60)
-                {
-                    sec = value;
-                }
-                else
-                {
+                if (value < 0 || value > 60)
                     Console.WriteLine("0-60!!!");
-                }
+                else
+                    sec = value;
             }
         }
         public Angle(double grad, double min, double sec)
         {
-            this.grad = grad;
-            this.min = min;
-            this.sec = sec;
+            Grad = grad;
+            Min = min;
+            Sec = sec;
         }
 
         public double ToRadians() // переменные прописывать не надо, метод имеет к ним доступ внутри класса
